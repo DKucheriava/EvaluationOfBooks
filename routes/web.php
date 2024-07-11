@@ -5,6 +5,10 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CommentController;
 
+Route::get('/', function () {
+    return redirect()->route('booksList');
+});
+
 Route::get('/register', function () {
     return view('register');
 });
@@ -26,7 +30,7 @@ Route::post('/logout', function () {
     return response()->json(['message' => 'Logged out successfully']);
 });
 
-Route::get('/books-list', [BookController::class, 'getBooks']);
+Route::get('/books-list', [BookController::class, 'getBooks'])->name('booksList');
 Route::get('/book-info/{id}', [BookController::class, 'bookInfo']);
 Route::post('/sort-books', [BookController::class, 'sortBooks'])->name('sortBooks');
 Route::post('/search-book', [BookController::class, 'searchBook'])->name('searchBook');

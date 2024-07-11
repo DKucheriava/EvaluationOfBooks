@@ -1,67 +1,87 @@
 # EvaluationOfBooks
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+#### Installation
 
-## About Laravel
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   ```
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+2. Install dependencies:
+   ```
+   cd project-directory
+   composer install
+   npm install
+   ```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+3. Set up environment variables:
+    - Rename `.env.example` to `.env`
+    - Configure your database and other necessary environment variables
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+4. Run migrations:
+   ```
+   php artisan migrate
+   ```
 
-## Learning Laravel
+5. Compile assets:
+   ```
+   npm run dev
+   ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+6. Start the development server:
+   ```
+   php artisan serve
+   ```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+#### Manual Testing Steps
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. Homepage Access
 
-## Laravel Sponsors
+- Open your web browser.
+- Navigate to http://127.0.0.1:8000/sort-books (or your configured URL if different).
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2. Register a User
 
-### Premium Partners
+- Click on "Register" or navigate to the registration page.
+- Fill out the registration form with valid data.
+- Submit the form and verify that the user is registered successfully.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+3. Login
 
-## Contributing
+- Navigate to the login page.
+- Enter the registered credentials and click "Login".
+- Verify that you are redirected to the homepage and can see authenticated user options.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. Add a Book
 
-## Code of Conduct
+- Click on "Add new book" button.
+- Fill out the book details form, including an image upload.
+- Submit the form and verify that the book is added successfully.
+- Check the database to ensure the book record exists with the correct details and image path.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. View Books List
 
-## Security Vulnerabilities
+- Navigate to the books list page (/books-list).
+- Verify that all added books are displayed correctly.
+- Check that each book card displays its title, author, and a functional link to view more details.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6. Search for a Book
 
-## License
+- Use the search input to enter a keyword (e.g., a book title or author's name).
+- Click on the "Search" button.
+- Verify that the search results display relevant books matching the keyword.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+7. Sort Books
+
+- Use the sort buttons (e.g., ascending or descending) to sort the books list by title or any other sortable field.
+- Verify that the books list updates according to the selected sort order.
+
+8. Update Books List Automatically
+
+- Observe that the books list automatically updates every 1 minute without requiring manual refresh.
+- Check that the displayed books change or shuffle based on the random order query.
+
+9. Logout
+
+- Click on "Logout" to log out of the application.
+Verify that authenticated user options are no longer visible.
