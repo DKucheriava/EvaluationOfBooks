@@ -1,0 +1,92 @@
+.hidden {
+    display: none;
+}
+
+.fade {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.fade.show {
+    opacity: 1;
+}
+
+#loginButton
+{
+    margin: 8px;
+}
+
+#registerButton
+{
+    margin: 8px;
+}
+
+#logoutButton {
+    float: right;
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+.card {
+    margin-bottom: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.bookImg
+{
+    width: 150px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+body
+{
+    padding-top: 100px;
+}
+
+h1
+{
+    margin: 20px;
+}
+
+#aboutBook
+{
+    margin: 8px;
+}
+
+.card-body
+{
+    text-align: left;
+}
+
+.sort-container {
+    display: flex;
+    align-items: center;
+}
+
+.btn-group-vertical {
+    margin-left: 10px;
+}
+
+#sortAscButton, #sortDescButton
+{
+    height: 15px;
+    font-size: 12px;
+    align-items: center;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+}
+
