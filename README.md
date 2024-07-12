@@ -18,9 +18,10 @@
     - Rename `.env.example` to `.env`
     - Configure your database and other necessary environment variables
 
-4. Run migrations:
+4. Run migrations and seed:
    ```
    php artisan migrate
+   php artisan make:seeder BooksTableSeeder
    ```
 
 5. Compile assets:
